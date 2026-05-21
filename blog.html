@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Health Library & Blog | Sky Dental Clinic Kurnool</title>
+  <meta name="description" content="Explore biological dental articles, oral health guides, Invisalign hygiene, pediatric cavity tips, and nutrition protocols from Sky Dental Clinic Kurnool.">
+  <meta name="keywords" content="dental blog kurnool, tooth brushing tips, clear aligners care, child dental health, oral pH balance, sky dental library">
+  <meta name="author" content="Sky Dental Clinic">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-logo">
+      <svg class="preloader-icon" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      </svg>
+      <h1 class="preloader-title text-serif">Sky Dental Clinic</h1>
+    </div>
+    <div class="preloader-bar">
+      <div class="preloader-progress"></div>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- STICKY HEADER -->
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+        </svg>
+        <span>Sky Dental</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Clinic</a>
+        <a href="services.html" class="nav-link">Services Hub</a>
+        <a href="pricing.html" class="nav-link">Fees & Plans</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <div class="nav-actions-mobile" style="display: none;">
+          <a href="contact.html#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <div class="theme-switch-container">
+          <button id="theme-toggle" class="theme-switch-btn" aria-label="Toggle Dark Mode">
+            <span class="theme-switch-thumb">
+              <svg class="sun-svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <svg class="moon-svg" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <a href="contact.html#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- INNER HERO -->
+    <section class="inner-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-active">Dental Health Library</span>
+        </nav>
+        <h1 class="text-serif" style="font-size: 3.2rem; color: var(--text); line-height: 1.2;">Sky Dental Health Library</h1>
+        <p class="section-subtitle text-secondary" style="margin-left: auto; margin-right: auto; max-width: 600px;">
+          Empowering your wellness with scientific, biological guides, hygiene protocols, and dental care secrets curated by our clinical experts.
+        </p>
+      </div>
+    </section>
+
+    <!-- LIBRARY & BLOG GRID SECTION -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Live Article Search -->
+        <div class="search-bar-wrapper anim-fade-up" style="margin-bottom: 30px;">
+          <span class="search-icon-decor">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <input type="text" id="blog-search" class="search-input-field" placeholder="Search biological articles..." aria-label="Search articles">
+        </div>
+
+        <!-- Category Filter Tags -->
+        <div class="blog-filters anim-fade-up">
+          <button class="filter-btn active" data-category="all">All Articles</button>
+          <button class="filter-btn" data-category="hygiene">Hygiene & Brushing</button>
+          <button class="filter-btn" data-category="ortho">Aligners & Ortho</button>
+          <button class="filter-btn" data-category="pediatric">Kids Dental Care</button>
+          <button class="filter-btn" data-category="nutrition">Oral pH & Nutrition</button>
+        </div>
+
+        <!-- No Results Banner -->
+        <div id="blog-no-results" class="card" style="display: none; text-align: center; padding: 40px; max-width: 600px; margin: 0 auto 40px auto; border-color: var(--accent);">
+          <div style="font-size: 3rem; margin-bottom: 15px;">📖</div>
+          <h3 class="text-serif" style="color: var(--accent); margin-bottom: 10px;">No Articles Found</h3>
+          <p class="text-secondary" style="font-size: 0.95rem;">Try modifying your keyword. You can search for "pH", "aligner", "brushing", or "cavity".</p>
+        </div>
+
+        <!-- Article Card Grid -->
+        <div class="grid grid-2 blog-grid" id="blog-grid" style="gap: 40px;">
+          <!-- Article 1 -->
+          <article class="card blog-card anim-fade-up" data-categories="hygiene" style="overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%;">
+            <div style="height: 250px; overflow: hidden; position: relative;">
+              <img src="assets/images/blog_brushing.jpg" alt="Electric toothbrush polishing enamel" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="blog-img">
+            </div>
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              <span class="blog-tag-badge">Hygiene & Brushing</span>
+              <h3 class="text-serif" style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text);">The Biological Guide to Micro-Clean Brushing</h3>
+              <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">
+                Discover the Bass technique, optimal electric toothbrush frequencies, and why scrubbing your teeth too hard destroys microscopic enamel matrices.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <span class="text-secondary" style="font-size: 0.8rem; font-weight: 500;">5 Min Read • May 15, 2026</span>
+                <a href="#" class="btn btn-secondary btn-sm read-article-btn">Read Article</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="card blog-card anim-fade-up" data-categories="ortho" style="overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%;">
+            <div style="height: 250px; overflow: hidden; position: relative;">
+              <img src="assets/images/blog_invisalign.jpg" alt="Invisalign aligner tray case" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="blog-img">
+            </div>
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              <span class="blog-tag-badge">Aligners & Ortho</span>
+              <h3 class="text-serif" style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text);">Invisalign: Daily Maintenance & Alignment Hygiene</h3>
+              <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">
+                Keep your clear aligner trays fully sterile. Our orthodontic experts outline standard washing crystals, stain prevention, and safe eating habits.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <span class="text-secondary" style="font-size: 0.8rem; font-weight: 500;">7 Min Read • May 12, 2026</span>
+                <a href="#" class="btn btn-secondary btn-sm read-article-btn">Read Article</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="card blog-card anim-fade-up" data-categories="pediatric" style="overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%;">
+            <div style="height: 250px; overflow: hidden; position: relative;">
+              <img src="assets/images/blog_kids.jpg" alt="Happy pediatric patient in chair" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="blog-img">
+            </div>
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              <span class="blog-tag-badge">Kids Dental Care</span>
+              <h3 class="text-serif" style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text);">Cavity Prevention: Child-Friendly Protocols</h3>
+              <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">
+                Prevent decay early. Uncover pediatric clinical sealant coatings, salivary calcium helpers, and painless habit transitions for primary molars.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <span class="text-secondary" style="font-size: 0.8rem; font-weight: 500;">4 Min Read • May 08, 2026</span>
+                <a href="#" class="btn btn-secondary btn-sm read-article-btn">Read Article</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="card blog-card anim-fade-up" data-categories="nutrition" style="overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%;">
+            <div style="height: 250px; overflow: hidden; position: relative;">
+              <img src="assets/images/blog_nutrition.jpg" alt="Healthy green fruits and vegetables" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="blog-img">
+            </div>
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              <span class="blog-tag-badge">Oral pH & Nutrition</span>
+              <h3 class="text-serif" style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text);">pH Balance & Salivary Remineralization Secrets</h3>
+              <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">
+                Discover the chemical threshold (pH 5.5) where enamel dissolution begins, and what biological foods naturally stimulate protective calcium-rich saliva.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                <span class="text-secondary" style="font-size: 0.8rem; font-weight: 500;">6 Min Read • Apr 28, 2026</span>
+                <a href="#" class="btn btn-secondary btn-sm read-article-btn">Read Article</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER CTA -->
+    <section class="section section-alt" style="padding: 80px 0;">
+      <div class="container text-center" style="max-width: 700px; margin: 0 auto;">
+        <span class="section-tag" style="margin-bottom: 20px;">Stay Informed</span>
+        <h2 class="text-serif" style="font-size: 2.4rem; margin-bottom: 15px; color: var(--text);">Subscribe to Our Wellness Journal</h2>
+        <p class="text-secondary" style="line-height: 1.6; margin-bottom: 30px; font-size: 0.95rem;">
+          Get micro-hygiene protocols, seasonal nutritional updates, and local dental care tips delivered to your inbox once a month. No clinical spam, ever.
+        </p>
+        <form style="display: flex; gap: 15px; width: 100%; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input type="email" placeholder="Enter your email address..." required style="flex-grow: 1; padding: 14px 22px; border-radius: var(--radius-md); border: 1.5px solid var(--border); background-color: var(--surface); color: var(--text); font-family: var(--font-sans); outline: none;">
+          <button type="submit" class="btn btn-primary">Join Scientific Journal</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container grid grid-4 footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 20px;">
+          <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+          <span style="color: var(--text);">Sky Dental</span>
+        </a>
+        <p class="text-secondary" style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">
+          Providing world-class cinematic dental care using advanced digital workflows, micro-invasive procedures, and biocompatible materials.
+        </p>
+        <p class="text-secondary" style="font-size: 0.85rem;">© 2026 Sky Dental Clinic. All rights reserved.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Clinic</a></li>
+          <li><a href="services.html">Services Hub</a></li>
+          <li><a href="pricing.html">Fees & Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">Patient Portal</h4>
+        <ul class="footer-links">
+          <li><a href="reviews.html">Success Stories</a></li>
+          <li><a href="technology.html">Advanced Tech</a></li>
+          <li><a href="faq.html">FAQ Hub</a></li>
+          <li><a href="blog.html">Dental Library</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">Our Location</h4>
+        <p class="text-secondary" style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
+          Sky Dental Clinic,<br>
+          Gayatri Estate, Kurnool,<br>
+          Andhra Pradesh - 518002
+        </p>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          <strong>Phone:</strong> +91 85189 99999<br>
+          <strong>Email:</strong> care@skydentalclinic.com
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  
+  <!-- Inline Interactive Filtering and Hover Effects for Blog Cards -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hover magnification effects
+      const blogCards = document.querySelectorAll('.blog-card');
+      blogCards.forEach(card => {
+        const img = card.querySelector('.blog-img');
+        card.addEventListener('mouseenter', () => {
+          if (img) img.style.transform = 'scale(1.08)';
+        });
+        card.addEventListener('mouseleave', () => {
+          if (img) img.style.transform = 'scale(1)';
+        });
+      });
+
+      // Category and Search Filtering
+      const searchInput = document.getElementById('blog-search');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const noResults = document.getElementById('blog-no-results');
+      
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      function filterArticles() {
+        let visibleCount = 0;
+
+        blogCards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const desc = card.querySelector('p').textContent.toLowerCase();
+          const tags = card.getAttribute('data-categories').split(' ');
+
+          const matchesCategory = activeCategory === 'all' || tags.includes(activeCategory);
+          const matchesSearch = title.includes(searchQuery) || desc.includes(searchQuery);
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+            visibleCount++;
+            
+            // Fade-in entry using GSAP if loaded
+            if (typeof gsap !== 'undefined') {
+              gsap.fromTo(card, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4 });
+            }
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Toggle No Results Banner
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+          if (visibleCount === 0 && typeof gsap !== 'undefined') {
+            gsap.fromTo(noResults, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 });
+          }
+        }
+      }
+
+      // Filter Button Event Listeners
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-category');
+          filterArticles();
+        });
+      });
+
+      // Search Field Input Event Listener
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          filterArticles();
+        });
+      }
+
+      // Modal visual mock for read-article buttons (portfolio quality)
+      const readBtns = document.querySelectorAll('.read-article-btn');
+      readBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const titleText = btn.closest('.blog-card').querySelector('h3').textContent;
+          alert(`☁️ Sky Dental Library\n\n"${titleText}" is currently loading our micro-biology reading frame. (Portfolio Demo integration complete!)`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

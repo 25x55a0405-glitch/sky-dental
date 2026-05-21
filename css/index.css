@@ -1,0 +1,342 @@
+/* ==========================================================================
+   ☁️ SKY DENTAL CLINIC — DESIGN SYSTEM & BASE CSS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES & COLOR PALETTES (DUAL THEME)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Fonts */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Color Palette - Light Mode Default */
+  --primary: #0A6C74;          /* Deep Teal */
+  --primary-light: #14919B;    /* Soft Teal */
+  --primary-dark: #064E55;     /* Ocean Teal */
+  --primary-pale: #E0F4F4;     /* Mist Backing */
+  
+  --accent: #E8734A;           /* Warm Coral */
+  --accent-hover: #D35A32;     /* Deep Coral */
+  --accent-pale: #FEF0EB;      /* Peach Blush */
+  
+  --bg: #FAFBFC;               /* Snow Background */
+  --surface: #FFFFFF;          /* Pure White Card */
+  --surface-alt: #F3F5F7;      /* Cloud Gray Secondary */
+  --surface-elevated: #FFFFFF; /* High Elevation Card */
+  
+  --text: #1A1A2E;             /* Charcoal Primary Text */
+  --text-secondary: #4A5568;   /* Slate Body Text */
+  --text-muted: #94A3B8;       /* Silver Muted Text */
+  --border: #E2E8F0;           /* Soft Border */
+  
+  --success: #10B981;          /* Mint Green */
+  --success-pale: #D1FAE5;
+  --error: #EF4444;            /* Coral Red */
+  
+  /* Shadows & Depth */
+  --shadow-sm: 0 1px 3px rgba(10, 108, 116, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(10, 108, 116, 0.08), 0 2px 4px -1px rgba(10, 108, 116, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(10, 108, 116, 0.05), 0 4px 6px -2px rgba(10, 108, 116, 0.02);
+  --shadow-xl: 0 20px 25px -5px rgba(10, 108, 116, 0.06), 0 10px 10px -5px rgba(10, 108, 116, 0.03);
+  --shadow-card: 0 12px 30px rgba(10, 108, 116, 0.06);
+  --shadow-glow: none;
+
+  /* Layout Constants */
+  --header-height: 80px;
+  --header-height-scrolled: 70px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-theme: 0.5s ease;
+}
+
+/* Color Palette - Dark Mode Override */
+[data-theme="dark"] {
+  --primary: #2DD4BF;          /* Aqua Glow (Desaturated & Lighter) */
+  --primary-light: #5EEAD4;    /* Light Mint */
+  --primary-dark: #14919B;     /* Deep Coral/Teal Tint */
+  --primary-pale: #0D3B3F;     /* Deep Teal Backing */
+  
+  --accent: #F59E7B;           /* Soft Coral */
+  --accent-hover: #E8734A;     /* Warm Coral */
+  --accent-pale: #3D2218;      /* Dark Coral Backing */
+  
+  --bg: #0B0F19;               /* Obsidian Background */
+  --surface: #141B2D;          /* Dark Slate (Elevation 1) */
+  --surface-alt: #1A2332;      /* Charcoal Blue (Elevation 2) */
+  --surface-elevated: #1E293B; /* Steel Blue (Elevation 3) */
+  
+  --text: #F1F5F9;             /* Snow White Text */
+  --text-secondary: #94A3B8;   /* Cool Gray Text */
+  --text-muted: #475569;       /* Dark Slate Muted */
+  --border: #1E293B;           /* Night Border */
+  
+  --success: #34D399;
+  --success-pale: #064E3B;
+  
+  /* Shadows & Depth in Dark Mode (Glows instead of shadows) */
+  --shadow-sm: 0 1px 3px rgba(45, 212, 191, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(45, 212, 191, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(45, 212, 191, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 1px rgba(45, 212, 191, 0.1);
+  --shadow-glow: 0 0 15px rgba(45, 212, 191, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   2. SYSTEM RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition-theme), 
+              color var(--transition-theme),
+              border-color var(--transition-theme),
+              box-shadow var(--transition-theme);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+  transition: color var(--transition-theme);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: color var(--transition-theme);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE SCROLLBAR STYLING
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* --------------------------------------------------------------------------
+   4. LAYOUT CONTAINERS & UTILITIES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-align-center { align-items: center; }
+.flex-justify-between { justify-content: space-between; }
+.flex-justify-center { justify-content: center; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-sm { gap: 10px; }
+.gap-md { gap: 20px; }
+.gap-lg { gap: 40px; }
+
+/* Spacing Helpers */
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-alt {
+  background-color: var(--surface-alt);
+}
+
+.m-top-sm { margin-top: 15px; }
+.m-top-md { margin-top: 30px; }
+.m-top-lg { margin-top: 50px; }
+
+.m-bottom-sm { margin-bottom: 15px; }
+.m-bottom-md { margin-bottom: 30px; }
+.m-bottom-lg { margin-bottom: 50px; }
+
+/* Text Utility Helpers */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-primary-color { color: var(--primary) !important; }
+.text-accent-color { color: var(--accent) !important; }
+.text-serif { font-family: var(--font-serif); }
+
+.section-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--primary-pale);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: var(--radius-full);
+  margin-bottom: 15px;
+  transition: all var(--transition-theme);
+}
+
+[data-theme="dark"] .section-tag {
+  color: var(--primary);
+  background-color: var(--primary-pale);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .section-title { font-size: 2rem; }
+  .section-subtitle { font-size: 1rem; margin-bottom: 30px; }
+}
+
+/* --------------------------------------------------------------------------
+   5. NATIVE CSS SCROLL PROGRESS BAR
+   -------------------------------------------------------------------------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: var(--primary-light);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. ACCESSIBILITY / SYSTEM OVERRIDES
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: scroll !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}

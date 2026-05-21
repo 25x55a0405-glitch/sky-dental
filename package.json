@@ -1,0 +1,22 @@
+{
+  "name": "sky-dental-clinic",
+  "version": "1.0.0",
+  "description": "Premium, fully animated portfolio website for Sky Dental Clinic",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "dental",
+    "portfolio",
+    "animated",
+    "gsap"
+  ],
+  "author": "Sky Dental Clinic",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
